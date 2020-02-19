@@ -12,6 +12,5 @@ public class App {
         String firstName = scanner.nextLine().trim();
         String lastName = scanner.nextLine().trim();
         String emailAddress = scanner.nextLine().trim();
-        Person person = new Person()
     }
 }
