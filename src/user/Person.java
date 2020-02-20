@@ -23,7 +23,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "\n" + firstName + " " + lastName + "\n" + emailAddress + "\n" + contacts;
+        return "\n" + firstName + " " + lastName + "\n" + emailAddress + "\n" + contacts + "\n";
     }
 }
 

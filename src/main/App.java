@@ -25,7 +25,8 @@ public class App {
                     operations.addNewContact();
                     break;
                 case 2:
-                    System.out.println("");
+                    Operations operations1 = new Operations();
+                    operations1.viewAllContacts();
                     break;
                 case 3:
                     //searching operation coming soon..

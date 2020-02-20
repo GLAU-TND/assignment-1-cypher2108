@@ -35,12 +35,14 @@ public class Operations {
                             contacts.add(phoneNumber);
                         } else {
                             System.out.println("Sorry Wrong Syntax.");
+                            break;
                         }
                     } else {
                         System.out.println("Sorry Wrong Syntax.");
+                        break;
                     }
 
-                    System.out.println("Would you like to add another contact number? (y/n): ");
+                    System.out.print("Would you like to add another contact number? (y/n): ");
                     character = scanner.next().charAt(0);
 
                 } while (character == 'y' || character == 'Y');
@@ -55,8 +57,14 @@ public class Operations {
         }
     }
 
+
+
     public void viewAllContacts() {
         //coming soon...
+        for (int i = 0; i< contactBook.size(); i++){
+            System.out.println(contactBook.get(i));
+        }
+
     }
 
     public void searchForContact() {
