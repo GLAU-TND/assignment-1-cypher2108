@@ -18,7 +18,7 @@ public class App {
         System.out.println("enter the email address");
         String emailAddress = scanner.next();
         System.out.println("enter the contact number.");
-        LinkedList contacts = new LinkedList();
+        LinkedList<String> contacts = new LinkedList<>();
         contacts.add(scanner.next());
 
         Person person = new Person(serialNumber, firstName, lastName, emailAddress, contacts);
