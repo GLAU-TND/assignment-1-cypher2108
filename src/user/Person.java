@@ -24,6 +24,15 @@ public class Person {
         this.contacts = contacts;
     }
 
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "serialNumber=" + serialNumber +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", contacts=" + contacts +
+                '}';
+    }
 }
 
