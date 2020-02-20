@@ -11,7 +11,7 @@ public class DatabaseConnection {
     private final String root = "root";
     private final String password = "";
 
-    public boolean attemptConnection(){
+    public boolean attemptConnection() {
 
         try {
 
@@ -27,7 +27,7 @@ public class DatabaseConnection {
         return connection;
     }
 
-    public void closeConnection(){
+    public void closeConnection() {
         try {
             connection.close();
             System.out.println("Disconnected.");
