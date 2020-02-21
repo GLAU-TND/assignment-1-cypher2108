@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegexFeature {
-    private String regexName = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆŠŽ∂ð ,.'-]+$";
+    private final String regexName = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆŠŽ∂ð ,.'-]+$";
 
     public boolean isFirstNameCorrect(String firstName) {
 
@@ -27,7 +27,7 @@ public class RegexFeature {
     }
 
     public boolean isPhoneNumberCorrect(String phoneNumber) {
-        String regexPhoneNumber = "((\\+*)((0[ -]+)*|(91 )*)(\\d{12}+|\\d{10}+))|\\d{5}([- ]*)\\d{6}";
+        final String regexPhoneNumber = "((\\+*)((0[ -]+)*|(91 )*)(\\d{12}+|\\d{10}+))|\\d{5}([- ]*)\\d{6}";
         Pattern patternPhoneNumber = Pattern.compile(regexPhoneNumber);
         Matcher matcherPhoneNumber = patternPhoneNumber.matcher(phoneNumber);
         return matcherPhoneNumber.matches();
