@@ -1,13 +1,18 @@
 package main;
 
+import databaseConfigure.DatabaseConnection;
 import features.Operations;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("\n\n***WELCOME TO PRAFUL's CONTACT LIST PROGRAM!***\n\n");
+        DatabaseConnection connection = new DatabaseConnection();
+        connection.attemptConnection();
+
+        System.out.println("\n***WELCOME TO PRAFUL's CONTACT LIST PROGRAM!***\n");
         Scanner scanner = new Scanner(System.in);
         Operations operations = new Operations();
         boolean key = true;
