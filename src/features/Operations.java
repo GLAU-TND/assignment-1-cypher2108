@@ -53,8 +53,7 @@ public class Operations {
     }
 
     public void viewAllContacts() {
-        System.out.println("---Here are all your contacts---\n" +
-                "-------- * -------- * -------- * --------");
+        System.out.println("-------- * -------- * -------- * --------\n");
         if (contactBook.size() == 0){
             System.out.println("**----**Empty**-----**");
         }
@@ -71,7 +70,7 @@ public class Operations {
             contactBook.get(i).displayContacts();
             System.out.println();
         }
-        System.out.println("-------- * -------- * -------- * --------\n");
+        System.out.println("\n-------- * -------- * -------- * --------");
     }
 
     public void searchForContact() {
