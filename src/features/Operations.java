@@ -53,7 +53,6 @@ public class Operations {
     }
 
     public void viewAllContacts() {
-        //coming soon...
         for (Person person : contactBook) {
             System.out.println(person);
         }
