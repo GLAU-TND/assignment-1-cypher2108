@@ -76,6 +76,32 @@ public class Operations {
 
     public void searchForContact() {
         //coming soon..
+        LinkedList <Integer>temp = new LinkedList <>();
+        int count = 0;
+        System.out.print("You could search for a contact from their first names: ");
+        String element = scanner.next();
+        for (int i =0; i<contactBook.size(); i++) {
+            if (element.equals(contactBook.get(i).getFirstName())) {
+                count++;
+                temp.add(i);
+            }
+        }
+        System.out.println(count + " match found.");
+        System.out.println("---Here are all your contacts---\n" +
+                "-------- * -------- * -------- * --------");
+        for (int i = 0; i < temp.size(); i++) {
+            if (i != 0){System.out.println("-------- * -------- * -------- * --------\n" +
+                    "-------- * -------- * -------- * --------");}
+            System.out.println("First Name: " + contactBook.get(temp.get(i)).getFirstName());
+            System.out.println("Last  Name: " + contactBook.get(temp.get(i)).getLastName());
+            System.out.println("Email Address: " + contactBook.get(temp.get(i)).getEmailAddress());
+            System.out.print("contacts: ");
+            contactBook.get(i).displayContacts();
+            System.out.println();
+
+
+        }
+        System.out.println("-------- * -------- * -------- * --------\n");
     }
 
     public void deleteContact() {
@@ -83,6 +109,8 @@ public class Operations {
     }
 
     public void exitProgram() {
+        System.out.println("thank you for using my phone directory\n" +
+                "have a good day!");
         //coming soon..
     }
 
