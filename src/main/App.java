@@ -9,6 +9,7 @@ public class App {
 
         System.out.println("\n\n***WELCOME TO PRAFUL's CONTACT LIST PROGRAM!***\n\n");
         Scanner scanner = new Scanner(System.in);
+        Operations operations = new Operations();
         char character;
         do {
             System.out.println("Press 1 to add a new contact\n" +
@@ -18,7 +19,6 @@ public class App {
                     "Press 5 to exit program");
 
             int choice = scanner.nextInt();
-            Operations operations = new Operations();
 
             switch (choice) {
                 case 1:
