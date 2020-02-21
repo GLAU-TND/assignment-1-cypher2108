@@ -85,7 +85,7 @@ public class Operations {
             }
         }
         System.out.println(count + " match found.");
-        System.out.println("---Here are all your contacts---\n" +
+        System.out.println("---Here are all your contacts that matched---\n" +
                 "-------- * -------- * -------- * --------");
         for (int i = 0; i < temp.size(); i++) {
             if (i != 0){System.out.println("-------- * -------- * -------- * --------\n" +
@@ -109,14 +109,13 @@ public class Operations {
         int choice = scanner.nextInt();
         System.out.println(contactBook.get(choice-1).getFirstName() + "'s contact deleted from the directory.");
         contactBook.remove(choice-1 );
-        viewAllContacts();
 
 
     }
 
     public boolean exitProgram() {
-        System.out.println("thank you for using my phone directory\n" +
-                "have a good day!");
+        System.out.println("\nthank you for using my phone directory\n" +
+                "have a good day!\n");
         return false;
 
 
