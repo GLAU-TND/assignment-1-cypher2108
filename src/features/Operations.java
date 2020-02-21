@@ -4,7 +4,6 @@ import databaseConfigure.DataHelper;
 import databaseConfigure.DatabaseConnection;
 import user.Person;
 
-import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.Scanner;
 
@@ -63,24 +62,25 @@ public class Operations {
     public void viewAllContacts() {
 
         System.out.println("\n***Here are all your contacts***\n"+
-                "-------- * -------- * -------- * --------\n");
-        if (contactBook.size() == 0) {
-            System.out.println("**----**Empty**-----**");
-        }
+                "-------- * -------- * -------- * -------- * -------- * -------- * -------- * -------- * --------");
+        /*if (contactBook.size() == 0) { System.out.println("**----**Empty**-----**"); }
         for (int i = 0; i < contactBook.size(); i++) {
             if (i != 0) {
                 System.out.println("-------- * -------- * -------- * --------\n" +
-                        "-------- * -------- * -------- * --------");
+                        "-------- * -------- * -------- * --------\n");
             }
 
             System.out.println("First Name: " + contactBook.get(i).getFirstName());
             System.out.println("Last  Name: " + contactBook.get(i).getLastName());
             System.out.println("Email Address: " + contactBook.get(i).getEmailAddress());
             System.out.print("contacts: ");
-            contactBook.get(i).displayContacts();
-            System.out.println();
-        }
-        System.out.println("\n-------- * -------- * -------- * --------");
+            contactBook.get(i).displayContacts();}*/
+        System.out.println(String.format("|%-30s|%-30s|%-30s|","firstName", "lastName", "emailAddress"));
+        System.out.println("-------- * -------- * -------- * -------- * -------- * -------- * -------- * -------- * --------\n");
+        dataHelper.showData(DatabaseConnection.getConnection());
+        System.out.println("-------- * -------- * -------- * -------- * -------- * -------- * -------- * -------- * --------\n");
+
+
     }
 
     public void searchForContact() {
@@ -137,7 +137,4 @@ public class Operations {
         //coming soon..
     }
 
-    public LinkedList<Person> getContactBook() {
-        return contactBook;
-    }
 }

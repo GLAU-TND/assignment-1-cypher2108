@@ -3,7 +3,6 @@ package main;
 import databaseConfigure.DatabaseConnection;
 import features.Operations;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class App {
@@ -50,7 +49,7 @@ public class App {
 
         } while (key);
 
-        System.out.println("\n***THANK YOU ****" +
+        System.out.println("\n***THANK YOU ****\n" +
                 "***COME AT ANYTIME***\n");
     }
 
