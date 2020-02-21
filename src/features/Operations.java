@@ -10,10 +10,10 @@ public class Operations {
     RegexFeature regexFeature = new RegexFeature();
 
     LinkedList<Person> contactBook = new LinkedList<>();
-    LinkedList<String> contacts = new LinkedList<>();
 
 
     public void addNewContact() {
+        LinkedList<String> contacts = new LinkedList<>();
         System.out.println("You have chosen to add a new contact: \n");
 
         System.out.print("enter the first name: ");
@@ -54,10 +54,9 @@ public class Operations {
 
     public void viewAllContacts() {
         //coming soon...
-    }
-
-    public LinkedList<Person> getContactBook() {
-        return contactBook;
+        for (Person person : contactBook) {
+            System.out.println(person);
+        }
     }
 
     public void searchForContact() {

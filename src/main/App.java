@@ -23,7 +23,7 @@ public class App {
             switch (choice) {
                 case 1:
                     operations.addNewContact();
-                    System.out.println(operations.getContactBook());
+                    System.out.println("Contact saved Successfully.");
                     break;
                 case 2:
                     operations.viewAllContacts();
