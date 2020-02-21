@@ -10,7 +10,7 @@ public class App {
         System.out.println("\n\n***WELCOME TO PRAFUL's CONTACT LIST PROGRAM!***\n\n");
         Scanner scanner = new Scanner(System.in);
         Operations operations = new Operations();
-        char character;
+        boolean key = true;
         do {
             System.out.println("Press 1 to add a new contact\n" +
                     "Press 2 to view all contacts\n" +
@@ -35,18 +35,18 @@ public class App {
                     operations.deleteContact();
                     break;
                 case 5:
-                    operations.exitProgram();
+                    key = operations.exitProgram();
                     break;
                 default:
                     System.out.println("please enter the valid option.");
+
                     break;
             }
 
-            System.out.println("\nDo you want to continue (Type y or n) \n");
-            character = scanner.next().charAt(0);
-        } while (character == 'Y' || character == 'y');
+        } while (key);
 
-        System.out.println("***THANK YOU COME AT ANYTIME***");
+        System.out.println("***THANK YOU ****" +
+                "***COME AT ANYTIME***");
     }
 
 }

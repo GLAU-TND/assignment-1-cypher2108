@@ -74,7 +74,6 @@ public class Operations {
     }
 
     public void searchForContact() {
-        //coming soon..
         LinkedList <Integer>temp = new LinkedList <>();
         int count = 0;
         System.out.print("You could search for a contact from their first names: ");
@@ -104,12 +103,23 @@ public class Operations {
     }
 
     public void deleteContact() {
-        //coming soon...
+        System.out.println("Here are all your contacts: ");
+        for (int i = 0; i < contactBook.size(); i++) { System.out.println((i+1) + ". " + contactBook.get(i).getFirstName()); }
+        System.out.print("Press the number against the contact to delete it: ");
+        int choice = scanner.nextInt();
+        System.out.println(contactBook.get(choice-1).getFirstName() + "'s contact deleted from the directory.");
+        contactBook.remove(choice-1 );
+        viewAllContacts();
+
+
     }
 
-    public void exitProgram() {
+    public boolean exitProgram() {
         System.out.println("thank you for using my phone directory\n" +
                 "have a good day!");
+        return false;
+
+
         //coming soon..
     }
 
