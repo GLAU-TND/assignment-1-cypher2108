@@ -21,6 +21,31 @@ public class Person {
         this.contacts = contacts;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public LinkedList<String> getContacts() {
+        return contacts;
+    }
+
+    public void displayContacts(){
+        for (int i = 0; i < contacts.size(); i++) {
+            System.out.print(contacts.get(i));
+            if (i != contacts.size()-1){
+                System.out.print(", ");
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "\n" + firstName + " " + lastName + "\n" + emailAddress + "\n" + contacts + "\n";

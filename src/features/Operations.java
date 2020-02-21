@@ -53,9 +53,25 @@ public class Operations {
     }
 
     public void viewAllContacts() {
-        for (Person person : contactBook) {
-            System.out.println(person);
+        System.out.println("---Here are all your contacts---\n" +
+                "-------- * -------- * -------- * --------");
+        if (contactBook.size() == 0){
+            System.out.println("**----**Empty**-----**");
         }
+        for (int i = 0; i < contactBook.size(); i++) {
+            if (i != 0){
+                System.out.println("-------- * -------- * -------- * --------\n" +
+                        "-------- * -------- * -------- * --------");
+            }
+
+            System.out.println("First Name: " + contactBook.get(i).getFirstName());
+            System.out.println("Last  Name: " + contactBook.get(i).getLastName());
+            System.out.println("Email Address: " + contactBook.get(i).getEmailAddress());
+            System.out.print("contacts: ");
+            contactBook.get(i).displayContacts();
+            System.out.println();
+        }
+        System.out.println("-------- * -------- * -------- * --------\n");
     }
 
     public void searchForContact() {
