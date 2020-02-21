@@ -11,7 +11,7 @@ public class Person {
     private String firstName;
     private String lastName;
     private String emailAddress;
-    private LinkedList<String> contacts = null;
+    private LinkedList<String> contacts;
 
     //constructor
     public Person(String firstName, String lastName, String emailAddress, LinkedList<String> contacts) {

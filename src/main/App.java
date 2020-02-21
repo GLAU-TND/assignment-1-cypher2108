@@ -18,26 +18,28 @@ public class App {
                     "Press 5 to exit program");
 
             int choice = scanner.nextInt();
+            Operations operations = new Operations();
 
             switch (choice) {
                 case 1:
-                    Operations operations = new Operations();
                     operations.addNewContact();
+                    System.out.println(operations.getContactBook());
                     break;
                 case 2:
-                    Operations operations1 = new Operations();
-                    operations1.viewAllContacts();
+                    operations.viewAllContacts();
                     break;
                 case 3:
-                    //searching operation coming soon..
+                    operations.searchForContact();
+                    break;
                 case 4:
-                    //deletion operation coming soon..
+                    operations.deleteContact();
+                    break;
                 case 5:
-                    System.out.println("exit >>>>");
+                    operations.exitProgram();
                     break;
                 default:
                     System.out.println("please enter the valid option.");
-
+                    break;
             }
 
             System.out.println("\nDo you want to continue (Type y or n) \n");
