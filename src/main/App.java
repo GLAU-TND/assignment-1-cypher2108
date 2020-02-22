@@ -1,29 +1,23 @@
 package main;
 
-import databaseConfigure.DatabaseConnection;
 import features.Operations;
-
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
 
-        DatabaseConnection connection = new DatabaseConnection();
-        connection.attemptConnection();
-
         System.out.println("\n***WELCOME TO PRAFUL's CONTACT LIST PROGRAM!***\n");
         Scanner scanner = new Scanner(System.in);
         Operations operations = new Operations();
         boolean key = true;
+
         do {
             System.out.println("\nPress 1 to add a new contact\n" +
                     "Press 2 to view all contacts\n" +
                     "Press 3 to search for a contact\n" +
                     "Press 4 to delete a contact\n" +
                     "Press 5 to exit program\n");
-
             int choice = scanner.nextInt();
-
             switch (choice) {
                 case 1:
                     operations.addNewContact();
@@ -43,13 +37,11 @@ public class App {
                     break;
                 default:
                     System.out.println("\nplease enter the valid option.\n");
-
                     break;
             }
-
         } while (key);
 
-        System.out.println("\n***THANK YOU ****\n" +
+        System.out.println("\n  ***THANK YOU ****\n" +
                 "***COME AT ANYTIME***\n");
     }
 
